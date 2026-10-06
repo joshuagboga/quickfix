@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-plum: #4a1d3f;
+  --color-plum-dark: #2e1028;
+  --color-plum-light: #8a3d72;
+  --color-gold: #c9a24d;
+  --color-gold-light: #f3e3bd;
+  --color-blush: #fbf1ee;
+  --color-cream: #fffaf6;
+  --color-ink: #2b2027;
+  --color-muted: #6f6169;
+  --color-line: #ead9d3;
+
+  --font-sans: "Poppins", system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+
+  --shadow-soft: 0 10px 30px rgba(74, 29, 63, 0.1);
+
+  --animate-float: float 4s ease-in-out infinite;
+  @keyframes float {
+    50% { transform: translateY(-14px); }
+  }
+}
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body { @apply bg-cream font-sans text-ink leading-relaxed; }
+  h1, h2, h3 { @apply font-display leading-tight text-plum-dark; }
+  input, select, textarea {
+    @apply w-full rounded-lg border border-line bg-cream px-3.5 py-2.5 text-sm text-ink
+      focus:border-transparent focus:outline-2 focus:outline-gold;
+  }
+  summary::-webkit-details-marker { display: none; }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block cursor-pointer rounded-full border-2 border-plum bg-plum px-6 py-3 text-center
+      text-[0.95rem] font-medium text-white transition hover:-translate-y-0.5 hover:bg-plum-dark;
+  }
+  .btn-outline { @apply bg-transparent text-plum hover:bg-plum hover:text-white; }
+  .btn-sm { @apply px-4 py-2 text-sm; }
+
+  .eyebrow { @apply mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-gold; }
+  .section-title { @apply mb-2.5 text-3xl md:text-4xl lg:text-[2.6rem]; }
+  .card { @apply rounded-2xl border border-line bg-white p-7 shadow-soft; }
+
+  .field { @apply grid gap-1.5 text-sm font-medium; }
+  .form-msg { @apply min-h-5 text-sm text-green-700; }
+
+  .tab {
+    @apply cursor-pointer rounded-full border border-line bg-white px-4 py-2 text-sm font-medium transition
+      hover:border-plum;
+  }
+  .tab.active { @apply border-plum bg-plum text-white; }
+
+  .chip { @apply rounded-full border border-line bg-white px-3.5 py-1.5 text-[0.82rem]; }
+
+  .gallery-item { @apply relative flex items-end overflow-hidden rounded-2xl; }
+  .gallery-item figcaption {
+    @apply w-full bg-linear-to-b from-transparent to-black/55 p-3.5 text-sm font-medium text-white;
+  }
+
+  .faq { @apply mb-3 rounded-xl border border-line bg-white px-5 py-4; }
+  .faq summary {
+    @apply flex cursor-pointer list-none justify-between font-semibold after:text-xl after:leading-none
+      after:text-gold after:content-['+'];
+  }
+  .faq[open] summary { @apply after:content-['−']; }
+  .faq p { @apply mt-2.5 text-muted; }
+
+  .price-card { @apply relative flex flex-col gap-3 text-center; }
+  .price-card ul { @apply mb-2 grid flex-1 list-none gap-1.5 text-sm text-muted; }
+  .price { @apply font-display text-3xl font-bold text-plum; }
+}

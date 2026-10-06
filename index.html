@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick-Fix Hair Studio | Salon, Wigs & Hair Shop</title>
+  <meta name="description" content="Quick-Fix: full-service hair studio for washing, styling, braids, locs, coloring, extensions, custom wig making, wig installs, and an online shop for wigs, bundles and hair care." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dist/output.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="sticky top-0 z-50 border-b border-line bg-cream/90 backdrop-blur-md" id="top">
+    <div class="mx-auto flex h-[70px] w-[min(1180px,100%-32px)] items-center justify-between">
+      <a href="#top" class="font-display text-2xl font-bold text-plum">Quick<span class="text-gold">-</span>Fix</a>
+      <nav id="navLinks" class="absolute inset-x-0 top-[70px] hidden flex-col gap-4 border-b border-line bg-cream p-6 text-[0.92rem] md:static md:flex md:flex-row md:items-center md:gap-6 md:border-0 md:bg-transparent md:p-0 [&.open]:flex">
+        <a href="#services" class="hover:text-gold">Services</a>
+        <a href="#wigs" class="hover:text-gold">Wig Studio</a>
+        <a href="#shop" class="hover:text-gold">Shop</a>
+        <a href="#pricing" class="hover:text-gold">Prices</a>
+        <a href="#gallery" class="hover:text-gold">Gallery</a>
+        <a href="#faq" class="hover:text-gold">FAQ</a>
+        <a href="#contact" class="hover:text-gold">Contact</a>
+        <a href="#booking" class="btn btn-sm">Book Now</a>
+      </nav>
+      <div class="flex items-center gap-2.5">
+        <button id="cartBtn" class="relative cursor-pointer text-2xl" aria-label="Open cart">
+          🛍️ <span id="cartCount" class="absolute -top-1.5 -right-2.5 grid h-5 min-w-5 place-items-center rounded-full bg-gold text-[0.7rem] font-semibold text-white">0</span>
+        </button>
+        <button id="menuBtn" class="cursor-pointer text-2xl md:hidden" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="bg-blush bg-[radial-gradient(circle_at_85%_20%,rgba(201,162,77,0.25),transparent_40%),radial-gradient(circle_at_10%_90%,rgba(74,29,63,0.12),transparent_40%)] pt-24 pb-20">
+    <div class="mx-auto grid w-[min(1180px,100%-32px)] items-center gap-10 lg:grid-cols-[1.2fr_1fr]">
+      <div>
+        <p class="eyebrow">Salon • Wig Studio • Hair Shop</p>
+        <h1 class="mb-5 text-[clamp(2.4rem,5vw,4rem)]">Hair trouble? <em class="text-gold">Quick-Fix</em> it.</h1>
+        <p class="max-w-xl text-lg text-muted">From a refreshing wash &amp; deep condition to custom-made wigs, braids, locs, color and extensions — every hair need, under one roof.</p>
+        <div class="my-8 flex flex-wrap gap-3.5">
+          <a href="#booking" class="btn">Book an Appointment</a>
+          <a href="#shop" class="btn btn-outline">Shop Wigs &amp; Hair</a>
+        </div>
+        <ul class="flex flex-wrap gap-9">
+          <li><strong class="block font-display text-2xl text-plum">60+</strong><span class="text-sm text-muted">Hair services</span></li>
+          <li><strong class="block font-display text-2xl text-plum">100%</strong><span class="text-sm text-muted">Human hair options</span></li>
+          <li><strong class="block font-display text-2xl text-plum">5★</strong><span class="text-sm text-muted">Client rated</span></li>
+        </ul>
+      </div>
+      <div class="relative hidden h-[420px] lg:block" aria-hidden="true">
+        <div class="absolute top-8 right-10 size-80 overflow-hidden rounded-full border-8 border-white bg-plum shadow-soft"><img src="images/hero.jpg" alt="Woman with voluminous curly hair" class="size-full object-cover" /></div>
+        <div class="absolute top-0 right-0 grid size-30 animate-float place-items-center rounded-full bg-gold-light text-[3.4rem] shadow-soft">⚡</div>
+        <div class="absolute bottom-5 left-5 grid size-25 animate-float place-items-center rounded-full bg-white text-[2.6rem] shadow-soft [animation-direction:reverse] [animation-duration:5s]">✨</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Highlights ===== -->
+  <section class="bg-plum py-4 text-gold-light">
+    <div class="mx-auto flex w-[min(1180px,100%-32px)] flex-wrap justify-center gap-x-8 gap-y-2 text-sm">
+      <span>🧴 Wash &amp; Treatments</span>
+      <span>💈 Cuts &amp; Styling</span>
+      <span>🎨 Color</span>
+      <span>🪢 Braids &amp; Locs</span>
+      <span>👩🏾‍🦱 Natural Hair</span>
+      <span>🧵 Wig Making</span>
+      <span>📦 Wig &amp; Bundle Shop</span>
+    </div>
+  </section>
+
+  <!-- ===== Services ===== -->
+  <section class="py-16 md:py-24" id="services">
+    <div class="mx-auto w-[min(1180px,100%-32px)]">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <p class="eyebrow">What we do</p>
+        <h2 class="section-title">Every Hair Service You Need</h2>
+        <p class="text-muted">Choose a category to explore our full menu.</p>
+      </div>
+      <div id="serviceTabs" class="mb-8 flex flex-wrap justify-center gap-2.5"></div>
+      <div id="serviceGrid" class="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-5"></div>
+    </div>
+  </section>
+
+  <!-- ===== Wig Studio ===== -->
+  <section class="bg-blush py-16 md:py-24" id="wigs">
+    <div class="mx-auto grid w-[min(1180px,100%-32px)] items-start gap-12 lg:grid-cols-[1.1fr_1fr]">
+      <div>
+        <p class="eyebrow">Wig Studio</p>
+        <h2 class="section-title">Custom Wigs, Made For You</h2>
+        <p>Our wig makers build units from scratch to fit your head, hairline and lifestyle — or bring new life to the wig you already love.</p>
+        <ol class="my-6 grid list-decimal gap-2.5 pl-5 marker:font-bold marker:text-gold">
+          <li><strong>Consult &amp; measure</strong> — head circumference, ear-to-ear, hairline shape.</li>
+          <li><strong>Choose your hair</strong> — texture, length, density, color, lace type.</li>
+          <li><strong>Construction</strong> — hand-ventilated or machine-sewn on your custom cap.</li>
+          <li><strong>Customize</strong> — bleached knots, plucked hairline, baby hairs, color &amp; cut.</li>
+          <li><strong>Install or pick up</strong> — glueless, glued, or sewn-in. Plus care tips.</li>
+        </ol>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">Custom wig making</span><span class="chip">Frontal &amp; closure units</span><span class="chip">Wig installs</span>
+          <span class="chip">Wig wash &amp; revamp</span><span class="chip">Wig coloring</span><span class="chip">Wig cutting &amp; styling</span>
+          <span class="chip">Lace replacement</span><span class="chip">Bleaching knots</span><span class="chip">Plucking &amp; baby hairs</span>
+          <span class="chip">Medical / alopecia wigs</span><span class="chip">Wig repair</span><span class="chip">Glueless conversions</span>
+        </div>
+      </div>
+      <form class="card grid gap-3.5" id="wigForm">
+        <h3 class="text-2xl">Request a Custom Wig</h3>
+        <label class="field">Name<input type="text" name="name" required /></label>
+        <label class="field">Phone or Email<input type="text" name="contact" required /></label>
+        <div class="grid gap-3.5 sm:grid-cols-2">
+          <label class="field">Texture
+            <select name="texture">
+              <option>Straight</option><option>Body Wave</option><option>Deep Wave</option>
+              <option>Water Wave</option><option>Loose Curl</option><option>Kinky Curly</option>
+              <option>Kinky Straight</option><option>Yaki</option>
+            </select>
+          </label>
+          <label class="field">Length
+            <select name="length">
+              <option>10"</option><option>12"</option><option>14"</option><option>16"</option>
+              <option>18"</option><option>20"</option><option>22"</option><option>24"</option>
+              <option>26"</option><option>28"</option><option>30"+</option>
+            </select>
+          </label>
+        </div>
+        <div class="grid gap-3.5 sm:grid-cols-2">
+          <label class="field">Lace
+            <select name="lace">
+              <option>13x4 Frontal</option><option>13x6 Frontal</option><option>360 Lace</option>
+              <option>Full Lace</option><option>5x5 Closure</option><option>4x4 Closure</option>
+              <option>HD Lace</option><option>Glueless / Wear-and-Go</option><option>U-Part / V-Part</option>
+            </select>
+          </label>
+          <label class="field">Density
+            <select name="density">
+              <option>150%</option><option>180%</option><option>200%</option><option>250%</option>
+            </select>
+          </label>
+        </div>
+        <label class="field">Color / notes<textarea name="notes" rows="3" placeholder="e.g. honey blonde, curtain bangs, middle part"></textarea></label>
+        <button class="btn w-full" type="submit">Send Request</button>
+        <p class="form-msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Shop ===== -->
+  <section class="py-16 md:py-24" id="shop">
+    <div class="mx-auto w-[min(1180px,100%-32px)]">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <p class="eyebrow">Online Shop</p>
+        <h2 class="section-title">Wigs, Bundles &amp; Hair Care</h2>
+        <p class="text-muted">Premium human hair and salon-grade products, shipped to your door.</p>
+      </div>
+      <div class="mb-2.5 flex flex-col items-center gap-1">
+        <div id="shopTabs" class="mb-8 flex flex-wrap justify-center gap-2.5"></div>
+        <input type="search" id="shopSearch" class="mb-7 max-w-sm bg-white" placeholder="Search products…" aria-label="Search products" />
+      </div>
+      <div id="productGrid" class="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-5"></div>
+    </div>
+  </section>
+
+  <!-- ===== Pricing ===== -->
+  <section class="bg-blush py-16 md:py-24" id="pricing">
+    <div class="mx-auto w-[min(1180px,100%-32px)]">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <p class="eyebrow">Price list</p>
+        <h2 class="section-title">Popular Packages</h2>
+      </div>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-5">
+        <div class="card price-card">
+          <h3 class="text-xl">Wash Day</h3>
+          <p class="price">$45</p>
+          <ul><li>Shampoo &amp; condition</li><li>Scalp massage</li><li>Blow dry</li><li>Light style</li></ul>
+          <a href="#booking" class="btn btn-outline w-full" data-book="Wash Day Package">Book</a>
+        </div>
+        <div class="card price-card border-2 border-gold lg:scale-[1.03]">
+          <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-gold px-3.5 py-1 text-xs font-semibold text-white">Most Popular</span>
+          <h3 class="text-xl">Glow Up</h3>
+          <p class="price">$120</p>
+          <ul><li>Wash &amp; deep condition</li><li>Steam treatment</li><li>Trim</li><li>Silk press or blowout</li></ul>
+          <a href="#booking" class="btn w-full" data-book="Glow Up Package">Book</a>
+        </div>
+        <div class="card price-card">
+          <h3 class="text-xl">Wig Install</h3>
+          <p class="price">$150</p>
+          <ul><li>Braid-down / cap prep</li><li>Lace cut &amp; melt</li><li>Baby hairs</li><li>Style of choice</li></ul>
+          <a href="#booking" class="btn btn-outline w-full" data-book="Wig Install Package">Book</a>
+        </div>
+        <div class="card price-card">
+          <h3 class="text-xl">Custom Unit</h3>
+          <p class="price">from $350</p>
+          <ul><li>Measured custom cap</li><li>Human hair of choice</li><li>Bleached &amp; plucked</li><li>Free first install</li></ul>
+          <a href="#wigs" class="btn btn-outline w-full">Request</a>
+        </div>
+      </div>
+      <p class="mt-7 text-center text-sm text-muted">Prices are starting prices and may vary with hair length, density and condition. Hair for braids/extensions may be extra.</p>
+    </div>
+  </section>
+
+  <!-- ===== Gallery ===== -->
+  <section class="py-16 md:py-24" id="gallery">
+    <div class="mx-auto w-[min(1180px,100%-32px)]">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <p class="eyebrow">Our work</p>
+        <h2 class="section-title">Gallery</h2>
+      </div>
+      <div class="grid auto-rows-[200px] grid-cols-2 gap-3.5 lg:grid-cols-4">
+        <figure class="gallery-item group row-span-2 bg-linear-160 from-[#6b2a5c] to-plum-dark"><img src="images/gallery-1.jpg" alt="Knotless Braids" loading="lazy" class="absolute inset-0 size-full object-cover transition duration-500 group-hover:scale-105" /><figcaption class="relative">Knotless Braids</figcaption></figure>
+        <figure class="gallery-item group bg-linear-160 from-gold to-[#7a5a1c]"><img src="images/gallery-2.jpg" alt="Silk Press" loading="lazy" class="absolute inset-0 size-full object-cover transition duration-500 group-hover:scale-105" /><figcaption class="relative">Silk Press</figcaption></figure>
+        <figure class="gallery-item group bg-linear-160 from-[#d98c8c] to-[#8a3d52]"><img src="images/gallery-3.jpg" alt="13x4 Frontal Install" loading="lazy" class="absolute inset-0 size-full object-cover transition duration-500 group-hover:scale-105" /><figcaption class="relative">13x4 Frontal Install</figcaption></figure>
+        <figure class="gallery-item group row-span-2 bg-linear-160 from-[#e7c27d] to-[#a66b2a]"><img src="images/gallery-4.jpg" alt="Honey Blonde Balayage" loading="lazy" class="absolute inset-0 size-full object-cover transition duration-500 group-hover:scale-105" /><figcaption class="relative">Honey Blonde Balayage</figcaption></figure>
+        <figure class="gallery-item group bg-linear-160 from-[#6e4a3a] to-[#2b1a12]"><img src="images/gallery-5.jpg" alt="Starter Locs" loading="lazy" class="absolute inset-0 size-full object-cover transition duration-500 group-hover:scale-105" /><figcaption class="relative">Starter Locs</figcaption></figure>
+        <figure class="gallery-item group bg-linear-160 from-[#f0d4d8] to-[#b57b8a]"><img src="images/gallery-6.jpg" alt="Bridal Updo" loading="lazy" class="absolute inset-0 size-full object-cover transition duration-500 group-hover:scale-105" /><figcaption class="relative">Bridal Updo</figcaption></figure>
+        <figure class="gallery-item group bg-linear-160 from-[#3a2a4a] to-[#120a1c]"><img src="images/gallery-7.jpg" alt="Custom Bob Unit" loading="lazy" class="absolute inset-0 size-full object-cover transition duration-500 group-hover:scale-105" /><figcaption class="relative">Custom Bob Unit</figcaption></figure>
+        <figure class="gallery-item group bg-linear-160 from-[#9b6b4a] to-[#4a2a18]"><img src="images/gallery-8.jpg" alt="Twist Out" loading="lazy" class="absolute inset-0 size-full object-cover transition duration-500 group-hover:scale-105" /><figcaption class="relative">Twist Out</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section class="bg-blush py-16 md:py-24">
+    <div class="mx-auto w-[min(1180px,100%-32px)]">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <p class="eyebrow">Love notes</p>
+        <h2 class="section-title">What Clients Say</h2>
+      </div>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-5">
+        <blockquote class="card"><p class="mb-3 italic">“My custom wig fits like it grew from my scalp. The hairline is unreal!”</p><cite class="font-semibold not-italic text-gold">— Adaeze O.</cite></blockquote>
+        <blockquote class="card"><p class="mb-3 italic">“Best wash and deep condition I've ever had. My curls have never been this soft.”</p><cite class="font-semibold not-italic text-gold">— Tasha M.</cite></blockquote>
+        <blockquote class="card"><p class="mb-3 italic">“Knotless braids done neat, fast and zero tension. I'm a client for life.”</p><cite class="font-semibold not-italic text-gold">— Bisi A.</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Booking ===== -->
+  <section class="py-16 md:py-24" id="booking">
+    <div class="mx-auto grid w-[min(1180px,100%-32px)] items-start gap-12 lg:grid-cols-[1fr_1.2fr]">
+      <div>
+        <p class="eyebrow">Appointments</p>
+        <h2 class="section-title">Book Your Visit</h2>
+        <p>Pick a service and preferred time. We'll confirm by phone, WhatsApp or email within 24 hours.</p>
+        <ul class="mt-6 grid gap-2.5">
+          <li>🕘 <strong>Mon–Fri:</strong> 9am – 8pm</li>
+          <li>🕙 <strong>Saturday:</strong> 8am – 9pm</li>
+          <li>🕛 <strong>Sunday:</strong> 12pm – 6pm (by appointment)</li>
+          <li>💳 A small deposit secures long appointments (braids, locs, wig units).</li>
+        </ul>
+      </div>
+      <form class="card grid gap-3.5" id="bookingForm">
+        <label class="field">Full Name<input type="text" name="name" required /></label>
+        <div class="grid gap-3.5 sm:grid-cols-2">
+          <label class="field">Phone<input type="tel" name="phone" required /></label>
+          <label class="field">Email<input type="email" name="email" /></label>
+        </div>
+        <label class="field">Service<select name="service" id="bookingService" required></select></label>
+        <div class="grid gap-3.5 sm:grid-cols-2">
+          <label class="field">Date<input type="date" name="date" id="bookingDate" required /></label>
+          <label class="field">Time<input type="time" name="time" min="08:00" max="21:00" required /></label>
+        </div>
+        <label class="field">Notes<textarea name="notes" rows="3" placeholder="Hair length, inspiration, allergies…"></textarea></label>
+        <button class="btn w-full" type="submit">Request Appointment</button>
+        <p class="form-msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="bg-blush py-16 md:py-24" id="faq">
+    <div class="mx-auto w-[min(780px,100%-32px)]">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <p class="eyebrow">Questions</p>
+        <h2 class="section-title">FAQ</h2>
+      </div>
+      <details class="faq"><summary>Should I come with my hair washed?</summary><p>Not necessary — every styling service can include a wash. For braids and installs we recommend booking our wash add-on so your scalp starts fresh.</p></details>
+      <details class="faq"><summary>Do you provide braiding hair and bundles?</summary><p>Yes. We stock braiding hair, crochet hair and 100% human hair bundles in the shop. You're also welcome to bring your own.</p></details>
+      <details class="faq"><summary>How long does a custom wig take?</summary><p>Most custom units are ready in 5–10 business days. Hand-ventilated full lace units can take 2–3 weeks.</p></details>
+      <details class="faq"><summary>Can you revive an old wig?</summary><p>Absolutely. Our wig revamp includes a deep wash, detangle, conditioning treatment, re-plucking, re-bleaching knots and restyling.</p></details>
+      <details class="faq"><summary>Do you work with kids and men?</summary><p>Yes — we offer kids' braids and styles, plus cuts, line-ups, twists and locs for men.</p></details>
+      <details class="faq"><summary>What is your shipping and return policy?</summary><p>Orders ship in 1–3 business days. Unworn hair with the lace uncut and in original packaging can be returned within 14 days.</p></details>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="py-16 md:py-24" id="contact">
+    <div class="mx-auto grid w-[min(1180px,100%-32px)] items-start gap-12 lg:grid-cols-[1fr_1.2fr]">
+      <div class="card [&_a]:font-medium [&_a]:text-plum [&_p]:mt-3">
+        <h3 class="text-2xl">Visit Us</h3>
+        <p>📍 123 Quick-Fix Avenue, Suite 4<br />Your City</p>
+        <p>📞 <a href="tel:+10000000000">(000) 000-0000</a></p>
+        <p>✉️ <a href="mailto:hello@quickfix.example">hello@quickfix.example</a></p>
+        <p>💬 WhatsApp &amp; Instagram: @quickfixhair</p>
+      </div>
+      <form class="card grid gap-3.5" id="contactForm">
+        <h3 class="text-2xl">Send a Message</h3>
+        <label class="field">Name<input type="text" name="name" required /></label>
+        <label class="field">Email<input type="email" name="email" required /></label>
+        <label class="field">Message<textarea name="message" rows="4" required></textarea></label>
+        <button class="btn w-full" type="submit">Send</button>
+        <p class="form-msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="bg-plum-dark pt-12 pb-5 text-[#e9dce4]">
+    <div class="mx-auto flex w-[min(1180px,100%-32px)] flex-wrap justify-between gap-8">
+      <div>
+        <a href="#top" class="font-display text-2xl font-bold text-white">Quick<span class="text-gold">-</span>Fix</a>
+        <p>Salon • Wig Studio • Hair Shop</p>
+      </div>
+      <form class="grid gap-2" id="newsletterForm">
+        <label for="nlEmail">Get hair tips &amp; 10% off your first order</label>
+        <div class="flex gap-2">
+          <input id="nlEmail" type="email" class="min-w-0 bg-white sm:min-w-56" placeholder="you@email.com" required />
+          <button class="btn btn-sm border-gold bg-gold" type="submit">Join</button>
+        </div>
+        <p class="form-msg text-gold-light" role="status"></p>
+      </form>
+    </div>
+    <p class="mt-8 text-center text-xs opacity-70">© <span id="year"></span> Quick-Fix Hair Studio. All rights reserved. · Photos: <a href="https://pixabay.com" class="underline">Pixabay</a></p>
+  </footer>
+
+  <!-- ===== Cart drawer ===== -->
+  <div id="overlay" class="pointer-events-none fixed inset-0 z-90 bg-black/40 opacity-0 transition-opacity duration-300 [&.show]:pointer-events-auto [&.show]:opacity-100"></div>
+  <aside id="cart" class="fixed top-0 right-0 z-100 flex h-full w-full max-w-[400px] translate-x-full flex-col bg-white transition-transform duration-300 [&.open]:translate-x-0" aria-label="Shopping cart">
+    <div class="flex items-center justify-between border-b border-line p-5">
+      <h3 class="text-xl">Your Cart</h3>
+      <button id="cartClose" class="cursor-pointer text-xl" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="flex-1 overflow-y-auto px-5 py-2.5"></div>
+    <div class="grid gap-3 border-t border-line p-5">
+      <div class="flex justify-between text-lg"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+      <button class="btn w-full" id="checkoutBtn">Checkout</button>
+      <p class="form-msg" id="checkoutMsg" role="status"></p>
+    </div>
+  </aside>
+
+  <div id="toast" class="fixed bottom-6 left-1/2 z-120 -translate-x-1/2 translate-y-[100px] rounded-full bg-plum-dark px-5 py-3 text-sm text-white transition-transform duration-300 [&.show]:translate-y-0"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
